@@ -14,36 +14,21 @@
 // console.log(removeFirstOccurrences("I like legends", "end"));
 // console.log(removeFirstOccurrences("ABABAB", "BA"));
 
-function removeFirstOccurrences(str, value) {
-  const index = str.indexOf(value);
-  if (index !== -1) {
-    return str.slice(0, index) + str.slice(index + value.length);
-  } else {
-    return str;
-  }
-}
+// Ushbu misolning ikkinchi usuli:
 
-// Example usage:
-const originalStringFirst = "To be or not to be";
-const originalStringSecond = "I like legends";
-const originalStringThird = "ABABAB";
+// function removeFirstOccurrences(str, value) {
+//   const index = str.indexOf(value);
+//   if (index !== -1) {
+//     return str.slice(0, index) + str.slice(index + value.length);
+//   } else {
+//     return str;
+//   }
+// }
 
-const substringToRemoveFirst = "not";
-const substringToRemoveSecond = "end";
-const substringToRemoveThird = "not";
-const resultBir = removeFirstOccurrences(
-  originalStringFirst,
-  substringToRemoveFirst
-);
-const resultIkki = removeSecondOccurrences(
-  originalStringSecond,
-  substringToRemoveSecond
-);
-// originalString,
-//   substringToRemoveSecond,
-//   originalStringThird,
-//   substringToRemoveThird;
-console.log(`Modified string: ${resultBir}, ${resultIkki}`);
+// const originalString = "To be or not to be";
+// const substringToRemove = "not";
+// const result = removeFirstOccurrences(originalString, substringToRemove);
+// console.log(`O'zgartirilgan string: ${result}`);
 
 // N{2}
 
@@ -158,7 +143,7 @@ console.log(`Modified string: ${resultBir}, ${resultIkki}`);
 // const inputArray = [1, 5, 6, 1, 5, 7, 2];
 // const uniqueElements = getElementsOneTime(inputArray);
 
-// console.log("Massiv elementlari orasidan faqat 1 marta ishtirok etganlari quyidagilar:" ,uniqueElements);
+// console.log("Massiv elementlari orasidan faqat 1 marta ishtirok etganlari quyidagilar:", uniqueElements);
 
 // N{7}
 
