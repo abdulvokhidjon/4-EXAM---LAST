@@ -1,4 +1,4 @@
-// 1-qism
+//4-EXAM | Part 1
 
 // N{1}
 
@@ -14,6 +14,37 @@
 // console.log(removeFirstOccurrences("I like legends", "end"));
 // console.log(removeFirstOccurrences("ABABAB", "BA"));
 
+function removeFirstOccurrences(str, value) {
+  const index = str.indexOf(value);
+  if (index !== -1) {
+    return str.slice(0, index) + str.slice(index + value.length);
+  } else {
+    return str;
+  }
+}
+
+// Example usage:
+const originalStringFirst = "To be or not to be";
+const originalStringSecond = "I like legends";
+const originalStringThird = "ABABAB";
+
+const substringToRemoveFirst = "not";
+const substringToRemoveSecond = "end";
+const substringToRemoveThird = "not";
+const resultBir = removeFirstOccurrences(
+  originalStringFirst,
+  substringToRemoveFirst
+);
+const resultIkki = removeSecondOccurrences(
+  originalStringSecond,
+  substringToRemoveSecond
+);
+// originalString,
+//   substringToRemoveSecond,
+//   originalStringThird,
+//   substringToRemoveThird;
+console.log(`Modified string: ${resultBir}, ${resultIkki}`);
+
 // N{2}
 
 // function unbracketTag(str) {
@@ -27,7 +58,17 @@
 // console.log(unbracketTag("<div>"));
 // console.log(unbracketTag("<span>"));
 // console.log(unbracketTag("<a>"));
-// console.log(unbracketTag("no brackets"));
+
+// Ushbu misolni ikkinchi ishlash usuli:
+
+// function unbracketTag(str) {
+
+//   return str.replace(/^<|>$/g, "");
+// }
+
+// console.log(unbracketTag("<div>"));
+// console.log(unbracketTag("<span>"));
+// console.log(unbracketTag("<a>"));
 
 // N{3}
 
@@ -68,12 +109,12 @@
 // }
 
 // const data = [
-//   { country: "Belarus", city: "Brest" },
-//   { country: "Russia", city: "Omsk" },
-//   { country: "Russia", city: "Samara" },
-//   { country: "Belarus", city: "Grodno" },
-//   { country: "Belarus", city: "Minsk" },
-//   { country: "Poland", city: "Lodz" },
+//   { country: "Belorusiyaga quyidagilar kiradi:", city: "Brest" },
+//   { country: "Rossiyaga quyidagilar kiradi:", city: "Omsk" },
+//   { country: "Rossiyaga quyidagilar kiradi:", city: "Samara" },
+//   { country: "Belorusiyaga quyidagilar kiradi:", city: "Grodno" },
+//   { country: "Belorusiyaga quyidagilar kiradi:", city: "Minsk" },
+//   { country: "Polshaga quyidagi kiradi:", city: "Lodz" },
 // ];
 
 // const groupedData = group(
@@ -117,7 +158,7 @@
 // const inputArray = [1, 5, 6, 1, 5, 7, 2];
 // const uniqueElements = getElementsOneTime(inputArray);
 
-// console.log(uniqueElements);
+// console.log("Massiv elementlari orasidan faqat 1 marta ishtirok etganlari quyidagilar:" ,uniqueElements);
 
 // N{7}
 
@@ -138,10 +179,10 @@
 //   return result;
 // }
 
-// const inputArray = [1, 1, 2, 2, 2, 3, 4, 4, 5, 5, 5, 6, 6, 7];
+// const inputArray = [1, 1, 2, 2, 2, 3, 4, 4, 5, 5, 5, 6, 6, 7,7,8,8,9,10,10,11,11];
 // const outputArray = removeDuplicateNeighbors(inputArray);
 
-// console.log(outputArray);
+// console.log("Massiv elementlari orasidan bir xil qo'shnilarning birini o'chirgandan keyingi holat:" ,outputArray);
 
 // N{8}
 
@@ -157,8 +198,8 @@
 //   const resultArray = firstPart.concat(secondPart);
 
 //   return {
-//     numberOfElements: resultArray.length,
-//     elements: resultArray,
+//     elementlarSoni: resultArray.length,
+//     elementlar: resultArray,
 //   };
 // }
 
@@ -217,226 +258,4 @@
 //   totalAmount += discountedPrice * product.quantity;
 // }
 
-// console.log("Total amount:", totalAmount);
-
-// 2-qism
-
-// N{1}
-
-// function getFileNameWithoutExtension(filePath) {
-//   const lastSlashIndex = filePath.lastIndexOf("/");
-//   const fileNameWithExtension = filePath.substring(lastSlashIndex + 1);
-
-//   const lastDotIndex = fileNameWithExtension.lastIndexOf(".");
-//   const fileNameWithoutExtension = fileNameWithExtension.substring(
-//     0,
-//     lastDotIndex
-//   );
-
-//   return fileNameWithoutExtension;
-// }
-
-// const filePath = "D:/Qudrat_c++/books/My_book.exe";
-// const fileName = getFileNameWithoutExtension(filePath);
-// console.log(fileName);
-
-// N{2}
-
-// function getSum3(N) {
-//   let sum = 0;
-//   for (let i = 1; i <= N; i++) {
-//     if (i % 3 === 0) {
-//       sum += i;
-//     }
-//   }
-//   return sum;
-// }
-
-// console.log(getSum3(15));
-
-// N{3}
-
-// function calculateSumOfSquares(n) {
-//   let sum = 0;
-//   for (let i = n; i <= 2 * n; i++) {
-//     sum += i * i;
-//   }
-//   return sum;
-// }
-
-// const n = 5;
-// const result = calculateSumOfSquares(n);
-// console.log(`The sum of squares from ${n}^2 to (${2 * n})^2 is: ${result}`);
-
-// N{4}
-
-// function createLengthObject(stringArray) {
-//   const lengthObject = {};
-
-//   for (let i = 0; i < stringArray.length; i++) {
-//     const string = stringArray[i];
-//     lengthObject[string] = string.length;
-//   }
-
-//   return lengthObject;
-// }
-
-// const strings = ["Abdulaziz", "Safarmurad", "Orol", "World"];
-// const resultObject = createLengthObject(strings);
-
-// console.log(resultObject);
-
-// N{5}
-
-// function getMultipleValues(n, obj) {
-//   const res = {};
-
-//   for (const key in obj) {
-//     if (obj.hasOwnProperty(key)) {
-//       res[key] = obj[key] * n;
-//     }
-//   }
-
-//   return res;
-// }
-
-// let n = 3;
-// const obj = {
-//   a: 2,
-//   b: 3,
-//   c: 4,
-//   d: 6,
-// };
-
-// const res = getMultipleValues(n, obj);
-// console.log(res);
-
-// N{6}
-
-// function replaceSmallestAndLargestWithZero(arr) {
-//   if (arr.length <= 1) {
-//     return arr;
-//   }
-
-//   let smallest = arr[0];
-//   let largest = arr[0];
-//   let smallestIndex = 0;
-//   let largestIndex = 0;
-
-//   for (let i = 1; i < arr.length; i++) {
-//     if (arr[i] < smallest) {
-//       smallest = arr[i];
-//       smallestIndex = i;
-//     }
-//     if (arr[i] > largest) {
-//       largest = arr[i];
-//       largestIndex = i;
-//     }
-//   }
-
-//   for (let i = 0; i < arr.length; i++) {
-//     if (
-//       i !== smallestIndex &&
-//       i !== largestIndex &&
-//       (arr[i] === smallest || arr[i] === largest)
-//     ) {
-//       arr[i] = 0;
-//     }
-//   }
-
-//   return arr;
-// }
-
-// const a = [2, 5, 1, 8, 2, 9, 1, 5, 8];
-// const result = replaceSmallestAndLargestWithZero(a);
-// console.log(result);
-
-// N{7}
-
-// function hasSpaces(str) {
-//   const words = str.split(" ");
-
-//   return words.length > 1;
-// }
-
-// const inputString = "I am Abdulaziz Programmer";
-// const result = hasSpaces(inputString);
-// console.log(result);
-
-// N{8}
-
-// const pupils = [
-//   {
-//     name: "Elbek",
-//     protcent: 95,
-//   },
-//   {
-//     name: "Zafar",
-//     protcent: 78,
-//   },
-//   {
-//     name: "Aziz",
-//     protcent: 83,
-//   },
-//   {
-//     name: "Jasur",
-//     protcent: 88,
-//   },
-//   {
-//     name: "Bobur",
-//     protcent: 66,
-//   },
-//   {
-//     name: "Kamron",
-//     protcent: 75,
-//   },
-// ];
-
-// const totalStudents = pupils.length;
-
-// let totalPercentage = pupils.reduce(
-//   (total, student) => total + student.protcent,
-//   0
-// );
-
-// let averagePercentage = totalPercentage / totalStudents;
-
-// console.log("O'rtacha protsentlar: " + averagePercentage);
-
-// let minPercentage = pupils.reduce(
-//   (min, student) => (student.protcent < min ? student.protcent : min),
-//   pupils[0].protcent
-// );
-
-// console.log("Eng past protsent: " + minPercentage);
-
-// N{9}
-
-// function uniqueElements(arr) {
-//   return arr.reduce((unique, item) => {
-//     return unique.includes(item) ? unique : [...unique, item];
-//   }, []);
-// }
-
-// const originalArray = [1, 2, 2, 3, 4, 4, 5];
-// const newArray = uniqueElements(originalArray);
-// console.log(newArray);
-
-// N{10}
-
-// const animals = [
-//   "dog",
-//   "chicken",
-//   "cat",
-//   "dog",
-//   "chicken",
-//   "chicken",
-//   "rabbit",
-// ];
-
-// const animalCounts = animals.reduce((acc, animal) => {
-//   acc[animal] = (acc[animal] || 0) + 1;
-//   return acc;
-// }, {});
-
-// console.log(animalCounts);
+// console.log("Umumiy hisob:", totalAmount);
